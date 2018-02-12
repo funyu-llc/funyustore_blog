@@ -52,10 +52,32 @@
 
 
   
+  
+  <div class="site-header-image">
+    <img id="originBg" width="100%" alt="Hike News" src="">
+  </div>
+
+  <div id="header-blur" class="site-header-image blur" style="position: absolute; top:0; height: 207px; min-height: 207px; min-width: 100%;">
+    <img id="blurBg" width="100%" style="top: 96%" alt="Hike News" src="">
+  </div>
+
+  <script>
+        var imgUrls = "css/images/pose01.jpg,https://source.unsplash.com/collection/954550/1920x1080,https://source.unsplash.com/collection/954550/1920x1081".split(",");
+        var random = Math.floor((Math.random() * imgUrls.length ));
+        if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+          document.getElementById("originBg").src=imgUrls[random];
+          document.getElementById("blurBg").src=imgUrls[random];
+        } else {
+          document.getElementById("originBg").src='/' + imgUrls[random];
+          document.getElementById("blurBg").src='/' + imgUrls[random];
+        }
+    </script>
+
+
 
 
 <header id="allheader" class="site-header" role="banner" 
-   >
+   style="width: 100%; position: absolute; top:0; background: rgba(255,255,255,.8);"  >
   <div class="clearfix container">
       <div class="site-branding">
 
@@ -100,7 +122,7 @@
         
           <section id="main">
   
-    <article id="post-test"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-new-year-clean"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
     
@@ -108,7 +130,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/02/13/test/">test</a>
+      <a class="article-title" href="/2018/02/13/new-year-clean/">如何在過年前DIY多用途的清潔劑</a>
     </h1>
   
 
@@ -116,71 +138,57 @@
     
     <div class="article-meta">
       
-	<a href="/2018/02/13/test/" class="article-date">
+	<a href="/2018/02/13/new-year-clean/" class="article-date">
 	  <time datetime="2018-02-12T17:26:59.000Z" itemprop="datePublished">二月 13, 2018</time>
 	</a>
 
-       
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/精油分享/">精油分享</a>
+ 
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        
-      
-    </div>
-    <footer class="entry-meta entry-footer">
-      
-      
-      
-    </footer>
-    <hr class="entry-footer-hr">
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-  
-    <article id="post-hello-world"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/02/13/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2018/02/13/hello-world/" class="article-date">
-	  <time datetime="2018-02-12T17:08:23.688Z" itemprop="datePublished">二月 13, 2018</time>
-	</a>
-
-       
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <p><img src="https://unsplash.com/photos/e9E5COT5sI0" alt="打掃地板"><br>中國新年又快要到了，你是否會和家人一起打掃，來個除舊佈新呢？</p>
+<p>放下手邊的工作，就在現在，來做個居家的清掃，你會發現今天會是很棒的一天！</p>
+<p>赫爾密斯的法則是：「其下如其上；其上如其下。」可見的外在空間是內在不可見的世界的顯現，留意一下電影的劇情，你或許會發現恐怖片、抑鬱的角色或在不和睦的關係裡，家中大多是黯淡無光的，家庭散發著冰冷、刺眼的光，或者家俱裝潢是散亂無章的。而那些快樂的角色、愉悅的氛圍下，室內空間也大多是光線怡人、整潔舒適的。或許，你曾有過經驗，當清理掉老舊的物品時，內心也感到開闊、安適，有種奇妙的感覺？</p>
+<p>從能量的觀點來看，雜物是沉重、阻礙流動的能量，而囤積的雜物則會加重這樣的能量，使得人生難以向前進，每一步的跨越都充滿阻礙。清理不再需要的雜物，是騰出額外的內在空間，幫助你進入更精微的場域和提升能量的有效方法。</p>
+<p>除了地板、客廳、房間之外，底下的萬用清潔劑配方還可用於清潔廚房、餐具、水槽和冰箱。尤其廚房容易有各種的氣味，冰箱的油漬、廚餘放置的地方…，很多人會將貓食盤或者狗窩也放在廚房裡，儘管這不是適合的地方。</p>
+<p>你將需要什麼？</p>
+<ul>
+<li><p>純水或75%藥用酒精200ml</p>
+</li>
+<li><p>白醋70g</p>
+</li>
+<li><p>全菌覆沒協同複方精油30滴 <a>(我要購買) / [全菌覆沒協同複方精油]</a></p>
+</li>
+<li><p>白楊花精4滴 <a>(我要購買) / [白楊花精]</a></p>
+</li>
+<li><p>忍冬花精4滴 <a>(我要購買) / [忍冬花精]</a></p>
+</li>
+<li><p>卡斯提爾無香清潔露1茶匙 <a>(我要購買) / [卡斯提爾無香清潔露]</a></p>
+</li>
+<li><p>噴霧瓶1罐</p>
+</li>
+</ul>
+<p>由於精油本身就具有殺菌、防腐的作用，也就是說，你可以不需額外添加防腐劑、抑菌劑。不管你如何使用精油，只要稀釋到適當的濃度後，不僅可以讓環境瀰漫著香氣，還能確保其安全。尤其全菌覆沒協同複方，在季節性流行性感冒或寒流來襲的時刻，是保持居家清潔、個人健康最好的配方。</p>
+<p>你將要做什麼？<br>將所有的成分混合後，加入噴霧瓶內。接著即可噴灑在各個地方。</p>
+<p>精油能夠淨化空氣，而不只是消除難聞的氣味而已。廚房在烹調（尤其煎炒炸時）的蒸氣中含有微小的脂肪分子，所以將這瓶清潔劑用於廚房時，會形成一層保護層，使自己不受脂肪分子的侵擾，使廚房的空氣和做出來的食物一樣新鮮誘人。在能量上，全菌覆沒協同複方更能帶來綠色和紫色的光，而忍冬花精和白楊花精能移除陳舊的能量、放下過去的包袱，不僅為你的空間帶來新的光，也能保護空間不受低等能量的干擾！</p>
+<p>一旦所有的物件都被清理乾淨後，便可以開始在地板上清潔，地板的清潔可以額外添加薄荷精油和檸檬精油各15滴。噴在地板上後，靜坐一會兒，接著你便可以使用拖把讓地板煥然一新。</p>
+<p>給自己和家人一個嶄新的空間吧！</p>
 
       
     </div>
     <footer class="entry-meta entry-footer">
       
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/精油分享/">精油分享</a>
+
       
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/清理/">清理</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/生活技巧/">生活技巧</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/過年/">過年</a></li></ul>
+
       
     </footer>
     <hr class="entry-footer-hr">
@@ -296,19 +304,7 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
-              <h6 style="margin: 0;"><a href="/2018/02/13/test/">test</a></h6>
-              <span>二月 13, 2018</span>
-            </div>
-
-          </li>
-        
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/2018/02/13/hello-world/">Hello World</a></h6>
+              <h6 style="margin: 0;"><a href="/2018/02/13/new-year-clean/">如何在過年前DIY多用途的清潔劑</a></h6>
               <span>二月 13, 2018</span>
             </div>
 
@@ -320,19 +316,40 @@
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">分類</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/精油分享/">精油分享</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">標籤</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/清理/">清理</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/生活技巧/">生活技巧</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/過年/">過年</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">標籤雲</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/清理/" style="font-size: 10px;">清理</a> <a href="/tags/生活技巧/" style="font-size: 10px;">生活技巧</a> <a href="/tags/過年/" style="font-size: 10px;">過年</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
     <h3 class="widget-title">彙整</h3>
 
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -382,6 +399,9 @@
 
 
     <!-- headerblur min height -->
+    
+      var headerblur = document.getElementById("header-blur");
+      headerblur.style.minHeight = window.getComputedStyle(document.getElementById("allheader"), null).height;
     
     
 </script>
